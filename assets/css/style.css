@@ -89,7 +89,6 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 10px;
 }
 
 header {
@@ -326,7 +325,7 @@ header {
 
 .modal-content {
   position: relative;
-  width: min(900px, 90%);
+  width: min(900px, 85%);
   height: 90vh;
   background: #fff;
   display: flex;
@@ -436,10 +435,11 @@ footer {
 
   main {
     width: 100vw;
+    margin-top: 20px;
   }
 
   .title-txt {
-    top: 90px;
+    top: 84px;
     width: 98%;
   }
 
@@ -486,15 +486,15 @@ footer {
   }
 
   .modal-content {
-    height: 84vh;
+    height: 90vh;
   }
 
   .modal-body {
-    padding: 0px 40px 40px;
+    padding: 0px 36px 36px;
   }
 
   .modal-title {
-    padding: 40px 0 28px;
+    padding: 36px 0 28px;
   }
 
   .modal-images {
