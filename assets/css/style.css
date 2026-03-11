@@ -164,9 +164,11 @@ header {
 .title-txt {
   position: absolute;
   margin: 0 auto;
-  top: 10px;
   pointer-events: none;
   width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3%;
 }
 
 
@@ -466,7 +468,7 @@ footer {
   }
 
   .title-txt {
-    top: 100px;
+    top: 20%;
     width: 90%;
   }
 
@@ -566,6 +568,6 @@ footer {
   }
 
   .title-txt {
-    top: 130px;
+    top: 30%;
   }
 }
