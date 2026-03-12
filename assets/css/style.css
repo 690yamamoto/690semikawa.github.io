@@ -472,25 +472,18 @@ footer {
   }
 
   .btn-tel {
-    right: -36px;
-    bottom: -36px;
-    width: 180px;
-    height: 180px;
+    right: -40px;
+    bottom: -40px;
+    transform: scale(0.955);
   }
 
   .btn-tel-icn {
-    gap: 3px;
+    gap: 2px;
   }
 
-  .btn-tel .font-en {
+  /*.btn-tel .font-en {
     letter-spacing: 0.5px;
-    font-size: 0.95em;
-  }
-
-  .btn-tel-icn::before {
-    width: 28px;
-    height: 28px;
-  }
+  }*/
 
   .swiper-wrapper {
     margin-left: -10%;
@@ -527,7 +520,7 @@ footer {
   }
 
   footer {
-  padding-top: 30px;
+  padding-top: 60px;
 }
 }
 
