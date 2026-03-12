@@ -321,12 +321,11 @@ header {
 /*titletxt======================*/
 .title-txt {
   position: absolute;
-  margin: 0 auto;
-  pointer-events: none;
-  width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  top: 3%;
+  top: 20px;
+  width: 80%;
+  pointer-events: none;
 }
 
 
