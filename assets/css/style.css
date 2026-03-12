@@ -323,8 +323,8 @@ header {
 .title-txt {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: -100px;
+  top: 0;
+  transform: translate(-50%, -70%);
   width: 80%;
   pointer-events: none;
 }
