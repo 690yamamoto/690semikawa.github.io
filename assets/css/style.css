@@ -159,6 +159,7 @@ header {
 .swiper {
   position: relative;
   margin: 0 auto;
+  overflow: visible;
 }
 
 .swiper-slide h2 {
@@ -323,7 +324,7 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 20px;
+  top: -100px;
   width: 80%;
   pointer-events: none;
 }
