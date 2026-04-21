@@ -20,17 +20,24 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background: linear-gradient(rgba(165, 171, 180, 0.1) 1px, transparent 1px) center / 40px 40px,
+    linear-gradient(90deg, rgba(165, 171, 180, 0.1) 1px, transparent 1px) center / 40px 40px;
 }
 
-/*body::after {
+body::after {
   content: "";
   position: fixed;
-  inset: 12px; 
+  inset: -12px; 
   pointer-events: none;
-  z-index: 9999;
-  border-radius: 20px;
-  box-shadow:0 0 0 100vmax #fff,inset 0 0 20px rgba(0,0,0,0.1);
-}*/
+  z-index: 999;
+  border: 24px solid transparent; 
+  border-radius: 44px;
+  transition: border-color 0.4s ease;
+}
+
+body.is-scrolled::after {
+  border-color: var(--main-color)
+}
 
 .texture {
   position: relative;
@@ -58,40 +65,23 @@ p {
   font-weight: 500;
 }
 
-h2 {
-  font-size: 2.4em;
-  border-top: 1px solid rgba(55, 60, 79, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  margin: 0 20px;
-}
-
 .section-title {
-  max-width: 1200px;
-  padding: 40px 20px 60px;
-  margin: 0 auto;
-}
-
-.title-main {
+  margin: 0 auto 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
 }
 
-.h2-icon {
-  width: 90px;
-  height: auto;
-  padding-top: 10px;
-  flex-shrink: 0;
+h2 p {
+  font-size: 1.6em;
+  align-items: center;
 }
 
-.h2-en {
-  font-family: "Manrope", sans-serif;
-  font-size: 0.5em;
-  font-weight: normal;
-  letter-spacing: 1.4px;
+.h2-icon {
+  width: auto;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 a {
@@ -125,17 +115,8 @@ img {
   align-items: flex-start;
 }
 
-.container-profile {
-  max-width: 1000px;
-  margin: 0 auto 140px;
-  margin: 0 auto 140px; /* ★ autoに戻して中央寄せにする */
-  padding: 0 20px;      /* ★ 余白はpaddingで作る */
-  width: 100%;          /* ★ 幅いっぱいに広がるようにする */
-  box-sizing: border-box; /* ★ 余白を含めた幅計算にする */
-}
-
 .container-swiper {
-  margin: 80px auto 0;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -148,7 +129,7 @@ img {
   width: 200px;
   height: 200px;
   background-image: url(../img/btn-cv.svg);
-  z-index: 50;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,7 +182,7 @@ header {
   padding: 30px;    /* 最初の余白（top/left 30pxの代わり） */
   z-index: 10000;   /* テクスチャより上に */
   align-items: center;
-  transition: all 0.4s ease; /* 背景・ボケ・余白の変化を滑らかに */
+  transition: all 0.4s ease;
 }
 
 header p {
@@ -213,21 +194,8 @@ text-align: center;
 }
 
 .logo {
-  width: 80px;      /* 最初のロゴサイズ */
-  transition: width 0.9s ease; /* サイズ変更を滑らかに */
-}
-
-/* --- スクロールした時の状態 --- */
-header.is-scrolled {
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);       /* Safari対応 */
-  padding: 10px 30px;
-}
-
-header.is-scrolled .logo {
-  padding-right: 2px;
-  width: 60px;
+  width: 80px;
+  transition: width 0.9s ease;
 }
 
 .mv-inner {
@@ -249,14 +217,14 @@ header.is-scrolled .logo {
 
 .mv-before {
   background: 
-    linear-gradient(rgba(165, 171, 180, 0.1) 1px, transparent 1px) center / 40px 40px,
-    linear-gradient(90deg, rgba(165, 171, 180, 0.1) 1px, transparent 1px) center / 40px 40px,
-    url(../img/mv-bc.jpg) center / cover no-repeat;
+    url(../img/mv-bc.png) center / cover no-repeat;
+  background-color: rgba(255, 255, 255, 0.3);
   margin: 12px 6px 12px 12px;
   border-radius: 20px;
 }
 
 .mv-after {
+  background: url(../img/mv-bc2.png) center / cover no-repeat;
   background-color: var(--main-color);
   margin: 12px 12px 12px 6px;
   border-radius: 20px;
@@ -278,7 +246,7 @@ header.is-scrolled .logo {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: max-content;
   align-items: center;
 }
 
@@ -329,10 +297,10 @@ header.is-scrolled .logo {
 
 
 /*intro======================*/
-.container-intro {
+.intro-container {
   max-width: 1200px;
   margin: 120px auto 180px;
-  padding: 0 20px;
+  padding: 0 30px;
   width: 100%;
 }
 
@@ -393,7 +361,15 @@ header.is-scrolled .logo {
   text-align: left;
 }
 
+
 /*profile======================*/
+.container-profile {
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  padding: 0 30px;
+  width: 100%; 
+}
+
 .profile {
   width: auto;
   min-height: auto;
@@ -402,8 +378,6 @@ header.is-scrolled .logo {
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(0,0,0,0.08);
   border-radius: 12px;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 
 /* ヘッダー */
@@ -463,6 +437,7 @@ header.is-scrolled .logo {
 }
 
 .name-content {
+  white-space: nowrap;
     font-size: 18pt;
     text-align: center;
     letter-spacing: 0.5em;
@@ -507,7 +482,7 @@ header.is-scrolled .logo {
 .year-col { width: 30mm; }
 .month-col { width: 15mm; text-align: center; }
 
-.section-title td {
+.title-col td {
     text-align: center;
     letter-spacing: 1em;
     background-color: #fafafa;
@@ -841,14 +816,14 @@ footer {
   padding: 20px;
 }
 
-  /*.btn-tel {
+  .btn-tel {
     right: -50px;
     bottom: -50px;
   }
 
   .btn-tel-icn {
     gap: 2px;
-  }*/
+  }
 
   .intro {
     flex-direction: column; 
@@ -879,8 +854,16 @@ footer {
     align-items: center;
   }
 
-  .container-intro {
+  .intro-container {
     margin-top: -70px;
+}
+
+.profile {
+  padding: 20px 30px 30px;
+}
+
+.name-content {
+    font-size: 16pt;
 }
 
   .swiper-wrapper {
