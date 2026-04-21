@@ -44,7 +44,7 @@
   </section>
 
 
-  <section class="intro container-intro">
+  <section class="intro intro-container">
     <div class="intro-left">
         <p class="intro-p">
             ホームページ制作会社にて4年間、Webデザインを中心に印刷物やロゴ制作など幅広いデザイン業務に携わってまいりました。
@@ -62,17 +62,17 @@
             メモや箇条書きの情報からでも目的や意図を丁寧に汲み取り、見た目の美しさだけでなく意味を持ったデザインを行います。
         </p>
     </div>
+    
 </section>
 
-  <section class="rirekisho">
-    <h2 class="section-title">
-    <div class="title-main">
-        <img src="assets/img/sec-icon.png" class="h2-icon" alt="">
-        リレキショ
+  <section class="rirekisho container-profile">
+    <h2>
+    <div class="section-title">
+        <img src="assets/img/sec-icon.gif" class="h2-icon" alt="">
+        <p>リレキショ</p>
     </div>
-    <span class="h2-en">profile</span>
 </h2>
-    <div class="profile container-profile">
+    <div class="profile">
         <p class="current-date">2026年 現在</p>
 
         <div class="profile-container">
@@ -112,34 +112,36 @@
                 <tr>
                     <th class="year-col">西暦</th>
                     <th class="month-col">月</th>
-                    <th class="detail-col">学歴 ・ 職歴（各項目ごとにまとめて書く）</th>
+                    <th class="detail-col">学歴・職歴・スキル</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="section-title"><td colspan="3">学歴</td></tr>
+                <tr class="title-col"><td colspan="3">学歴</td></tr>
                 <tr><td>2019年</td><td>4</td><td>比治山大学短期大学部 美術科   入学</td></tr>
                 <tr><td>2021年</td><td>3</td><td>比治山大学短期大学部 美術科  卒業</td></tr>
                 
-                <tr class="section-title"><td colspan="3">職歴</td></tr>
-                <tr><td>2021年</td><td>4</td><td>ホームページ制作会社  入社</td></tr>
-                <tr><td>2025年</td><td>5</td><td>ホームページ制作会社  一身上の都合により退職</td></tr>
+                <tr class="title-col"><td colspan="3">職歴</td></tr>
+                <tr><td>2021年</td><td>4</td><td>HP制作会社  入社</td></tr>
+                <tr><td>2025年</td><td>5</td><td>HP制作会社  一身上の都合により退職</td></tr>
 
-                <tr class="section-title"><td colspan="3">訓練歴</td></tr>
-                <tr><td>2025年</td><td>12</td><td>委託訓練 Web制作×デザイン×ビジネス活用科  入校</td></tr>
-                <tr><td>2026年</td><td>3</td><td>委託訓練 Web制作×デザイン×ビジネス活用科  修了</td></tr>
+                <tr class="title-col"><td colspan="3">訓練歴</td></tr>
+                <tr><td>2025年</td><td>12</td><td>委託訓練  入校</td></tr>
+                <tr><td>2026年</td><td>3</td><td>委託訓練   修了</td></tr>
                 <tr><td></td><td></td><td class="text-right">以上</td></tr>
+
+                <tr class="title-col"><td colspan="3">スキル</td></tr>
+                <tr><td colspan="3">前職では主にFireworksを使用しており、その他Illustrator/Photoshop/XDが使用できます。コーディング・STUDIOの基礎知識有。<br>また、未経験のツールでも積極的に学び、柔軟に対応いたします。</td></tr>
             </tbody>
         </table>
         </div>
   </section>
 
   <section class="works container">
-    <h2 class="section-title">
-    <div class="title-main">
-        <img src="assets/img/sec-icon.png" class="h2-icon" alt="">
-        ワークス
+    <h2>
+    <div class="section-title">
+        <img src="assets/img/sec-icon.gif" class="h2-icon" alt="">
+        <p>ワークス</p>
     </div>
-    <span class="h2-en">works</span>
 </h2>
   <div class="page-container">
       <div class="swiper">
@@ -465,14 +467,14 @@
     overlay.addEventListener('click', closeModal);
 
 
-    //追加：ヘッダー=======
     window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      if (window.scrollY > 200) { 
-        header.classList.add('is-scrolled');
-      } else {
-        header.classList.remove('is-scrolled');
-      }
+  const body = document.body;
+
+  if (window.scrollY > 200) { 
+    body.classList.add('is-scrolled');
+  } else {
+    body.classList.remove('is-scrolled');
+  }
     });
   </script>
 </body>
