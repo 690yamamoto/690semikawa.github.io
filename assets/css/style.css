@@ -793,7 +793,7 @@ footer {
 
   .mv-center {
   top: 76%;
-  transform: translate(-50%, -50%) scale(0.85);
+  transform: translate(-50%, -50%) scale(0.7);
 }
 
   .mv-center img {
@@ -802,6 +802,10 @@ footer {
 
   .mv-title {
     margin-left: 15px;
+  }
+
+  .mv-title-sub {
+    transform: scale(1.3);
   }
   
   .mv-before {
@@ -860,6 +864,11 @@ footer {
 
 .profile {
   padding: 20px 30px 30px;
+}
+
+.label-cell {
+    width: auto;
+    font-size: 8pt;
 }
 
 .name-content {
