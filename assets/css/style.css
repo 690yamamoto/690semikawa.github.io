@@ -499,8 +499,8 @@ text-align: center;
 .works-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 基本は3列 */
-  gap: 48px 20px;
-  max-width: 1100px;
+  gap: 48px 50px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -511,7 +511,7 @@ text-align: center;
 }
 
 .work-item:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 .work-item.is-hidden {
@@ -561,7 +561,6 @@ box-shadow: none;
 
 .work-thumb {
   width: 100%;
-  aspect-ratio: 3 / 2.2;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -590,18 +589,14 @@ box-shadow: none;
 .work-item-title {
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 6px;
-  line-height: 1.4;
+  padding: 20px 0 12px;
+  line-height: 0;
 }
 
 .work-tag {
   display: inline-block;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--main-color);
-  border: 1px solid var(--main-color);
-  padding: 5px 11px;
-  border-radius: 99px;
-  font-weight: bold;
 }
 
 
@@ -749,7 +744,7 @@ footer {
   text-align: left;
   font-size: small;
   opacity: .7;
-  padding: 100px 0 80px 44px;
+  padding: 100px 0 80px 36px;
 }
 
 
@@ -860,8 +855,12 @@ footer {
     gap: 32px 12px;
   }
 
-  .swiper-modal-btn img {
-  transform: scale(0.8);
+  /* 右下のプラスボタン */
+.work-plus-btn {
+  right: 8px;
+  bottom: 8px;
+  width: 36px;
+  height: 36px;
 }
 
   .modal-body {
