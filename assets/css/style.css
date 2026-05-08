@@ -589,8 +589,8 @@ box-shadow: none;
 .work-item-title {
   font-size: 1rem;
   font-weight: bold;
-  padding: 20px 0 12px;
-  line-height: 0;
+  padding: 20px 0 2px;
+  line-height: 1.4;
 }
 
 .work-tag {
